@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>HoneyMoney</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="phones-container">
+      <section class="phone viewer-phone" data-phone="wallet">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">YOUR WALLET</p>
+            <h1>HoneyMoney</h1>
+          </div>
+
+          <button class="profile-btn" type="button" data-target-panel="profile" aria-label="Open profile">
+            AS
+          </button>
+        </header>
+
+        <div class="screen-panels">
+          <section class="panel is-active" data-panel="home" aria-label="Home">
+            <section class="balance-card">
+              <button class="refresh-btn" type="button" data-action="refresh" aria-label="Refresh balance">
+                ↻
+              </button>
+
+              <p>Total balance</p>
+              <h2 data-role="balance">₹52,430</h2>
+
+              <div class="balance-stats">
+                <div>
+                  <span>Monthly Credit</span>
+                  <strong id="m-credit">₹40,000</strong>
+                </div>
+
+                <div>
+                  <span>Monthly Debit</span>
+                  <strong id="m-debit">₹6,220</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="quick-actions">
+              <button class="action-btn" type="button">
+                <span>↓</span>
+                Deposit
+              </button>
+
+              <button class="action-btn" type="button">
+                <span>↑</span>
+                Transfer
+              </button>
+
+              <button class="action-btn" type="button">
+                <span>⌁</span>
+                Insights
+              </button>
+            </section>
+
+            <section class="activity">
+              <div class="section-title">
+                <h3>Recent activity</h3>
+                <button type="button" class="activity-toggle" data-action="toggle-transactions">See all</button>
+              </div>
+
+              <div class="transaction-list" data-role="transactions"></div>
+            </section>
+          </section>
+
+          <section class="panel" data-panel="stats" aria-label="Stats">
+            <section class="empty-panel">
+              <p class="eyebrow">STATISTICS</p>
+              <h2>No stats</h2>
+              <p class="empty-copy">There is nothing to show here yet, but this tab is ready to open.</p>
+            </section>
+          </section>
+
+          <section class="panel" data-panel="profile" aria-label="Profile">
+            <section class="profile-card">
+              <div class="profile-hero">
+                <div class="profile-avatar" id="profile-avatar">AS</div>
+                <div>
+                  <p class="eyebrow">PROFILE</p>
+                  <h2 id="profile-name">Arya Sharma</h2>
+                  <span id="profile-username">@honey.money</span>
+                </div>
+              </div>
+
+              <div class="profile-stats">
+                <div>
+                  <span>Wallet</span>
+                  <strong data-role="balance">₹52,430</strong>
+                </div>
+                <div>
+                  <span>Spent today</span>
+                  <strong data-role="today-spent">₹1,070</strong>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <button type="button">Edit profile</button>
+                <button type="button">Security</button>
+                <button type="button">Notifications</button>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <nav class="bottom-nav nav-3" aria-label="Wallet navigation">
+          <button type="button" class="nav-btn nav-active" data-target-panel="home">⌂<span>Home</span></button>
+          <button type="button" class="nav-btn" data-target-panel="stats">◔<span>Stats</span></button>
+          <button type="button" class="nav-btn" data-target-panel="profile">◉<span>Profile</span></button>
+        </nav>
+      </section>
+
+      <section class="phone add-phone" data-phone="transactions">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">MONEY CONTROL</p>
+            <h1>Add money</h1>
+          </div>
+
+          <button class="profile-btn" type="button" data-target-panel="profile" aria-label="Open profile">
+            AS
+          </button>
+        </header>
+
+        <div class="screen-panels">
+          <section class="panel" data-panel="home" aria-label="Home">
+            <section class="balance-card">
+              <button class="refresh-btn" type="button" data-action="refresh" aria-label="Refresh balance">
+                ↻
+              </button>
+
+              <p>Total balance</p>
+              <h2 data-role="balance">₹52,430</h2>
+
+              <div class="balance-stats">
+                <div>
+                  <span>Monthly Credit</span>
+                  <strong id="m-credit">₹40,000</strong>
+                </div>
+
+                <div>
+                  <span>Monthly Debit</span>
+                  <strong id="m-debit">₹6,220</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="quick-actions">
+              <button class="action-btn" type="button">
+                <span>↓</span>
+                Deposit
+              </button>
+
+              <button class="action-btn" type="button">
+                <span>↑</span>
+                Transfer
+              </button>
+
+              <button class="action-btn" type="button">
+                <span>⌁</span>
+                Insights
+              </button>
+            </section>
+
+            <section class="activity">
+              <div class="section-title">
+                <h3>Recent activity</h3>
+                <button type="button" class="activity-toggle" data-action="toggle-transactions">See all</button>
+              </div>
+
+              <div class="transaction-list" data-role="transactions"></div>
+            </section>
+          </section>
+
+          <section class="panel is-active" data-panel="add" aria-label="Add transaction">
+            <section class="today-summary">
+              <p>TODAY'S SPENDING</p>
+              <strong data-role="today-spent">₹1,070</strong>
+              <span>Keep your expenses in check ✦</span>
+            </section>
+            
+            <section class="add-banner">
+              <span>✦</span>
+              <div>
+                <p>QUICK ENTRY</p>
+                <h2>Track every rupee.</h2>
+              </div>
+            </section>
+
+            <form data-role="transaction-form">
+              <div class="type-switch" role="tablist" aria-label="Transaction type">
+                <button type="button" class="type-btn active" data-type="DEBIT">Debit</button>
+                <button type="button" class="type-btn" data-type="CREDIT">Credit</button>
+              </div>
+
+              <label>
+                Amount
+                <div class="amount-box">
+                  <span>₹</span>
+                  <input data-role="amount" type="number" inputmode="numeric" placeholder="0" min="1" required />
+                </div>
+              </label>
+
+              <label>
+                What was it for?
+                <input data-role="title" type="text" placeholder="e.g. Grocery, Salary" required />
+              </label>
+
+              <label>
+                Category
+                <input type="hidden" data-role="debit-category-value" value="General" />
+                <div class="category-picker" data-role="debit-category-picker">
+                  <button type="button" class="category-chip active" data-category="General">General</button>
+                  <button type="button" class="category-chip" data-category="Food">Food &amp; Drinks</button>
+                  <button type="button" class="category-chip" data-category="Shopping">Shopping</button>
+                  <button type="button" class="category-chip" data-category="Travel">Travel</button>
+                  <button type="button" class="category-chip" data-category="Work">Work</button>
+                </div>
+              </label>
+
+              <label class="credit-category-field is-hidden" data-role="credit-category-field">
+                Category
+                <input type="hidden" data-role="credit-category-value" value="Company" />
+                <div class="category-picker" data-role="credit-category-picker">
+                  <button type="button" class="category-chip active" data-category="Company">Company</button>
+                  <button type="button" class="category-chip" data-category="Client">Client</button>
+                  <button type="button" class="category-chip" data-category="Friend">Friend</button>
+                  <button type="button" class="category-chip" data-category="Family">Family</button>
+                </div>
+              </label>
+
+              <button type="submit" class="save-btn">
+                <span>＋</span>
+                Add transaction
+              </button>
+            </form>
+          </section>
+
+          <section class="panel" data-panel="stats" aria-label="Stats">
+            <section class="empty-panel">
+              <p class="eyebrow">STATISTICS</p>
+              <h2>No stats</h2>
+              <p class="empty-copy">There is nothing to show here yet, but this tab is ready to open.</p>
+            </section>
+          </section>
+
+          <section class="panel" data-panel="profile" aria-label="Profile">
+            <section class="profile-card">
+              <div class="profile-hero">
+                <div class="profile-avatar" id="profile-avatar">AS</div>
+                <div>
+                  <p class="eyebrow">PROFILE</p>
+                  <h2 id="profile-name">Arya Sharma</h2>
+                  <span id="profile-username">@honey.money</span>
+                </div>
+              </div>
+
+              <div class="profile-stats">
+                <div>
+                  <span>Wallet</span>
+                  <strong data-role="balance">₹52,430</strong>
+                </div>
+                <div>
+                  <span>Spent today</span>
+                  <strong data-role="today-spent">₹1,070</strong>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <button type="button">Edit profile</button>
+                <button type="button">Security</button>
+                <button type="button">Notifications</button>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <nav class="bottom-nav nav-4" aria-label="Transactions navigation">
+          <button type="button" class="nav-btn" data-target-panel="home">⌂<span>Home</span></button>
+          <button type="button" class="nav-btn nav-active" data-target-panel="add">＋<span>Add</span></button>
+          <button type="button" class="nav-btn" data-target-panel="stats">◔<span>Stats</span></button>
+          <button type="button" class="nav-btn" data-target-panel="profile">◉<span>Profile</span></button>
+        </nav>
+      </section>
+
+      <section class="phone auth-phone" data-phone="auth">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">LOGIN/SIGNUP</p>
+            <h1>Account verification</h1>
+          </div>
+        </header>
+
+        <div class="screen-panels">
+          <section class="panel is-active" data-panel="auth" aria-label="Authentication">
+            <section class="auth-card">
+              <div class="auth-hero">
+                <p class="eyebrow">WELCOME HONEY</p>
+                <h2>HONEY MONEY</h2>
+              </div>
+
+              <div class="auth-switch" role="tablist" aria-label="Authentication mode">
+                <button type="button" class="auth-btn active" data-auth-mode="login">Login</button>
+                <button type="button" class="auth-btn" data-auth-mode="signup">Signup</button>
+              </div>
+
+              <form class="auth-form is-active" data-auth-form="login">
+                <label>
+                  username
+                  <input type="username" placeholder="@username" name="username" required />
+                </label>
+
+                <label>
+                  Password
+                  <input type="password" placeholder="Enter password" name="password" required />
+                </label>
+
+                <button type="submit" class="save-btn auth-submit">Login</button>
+              </form>
+
+              <form class="auth-form" data-auth-form="signup">
+                <label>
+                  Full name
+                  <input type="text" placeholder="Your name" name="name" required />
+                </label>
+
+                <label>
+                  Username
+                  <input type="text" placeholder="@username" name="username" required />
+                </label>
+
+                <label>
+                  Email
+                  <input type="email" placeholder="you@example.com" name="email" required />
+                </label>
+
+                <label>
+                  Phone no
+                  <input type="text" placeholder="+91 98565xxxxx" name="phone_no" required />
+                </label>
+
+                <label>
+                  Password
+                  <input type="password" placeholder="Create password" name="password" required />
+                </label>
+
+                <label>
+                  Confirm password
+                  <input type="password" placeholder="Repeat password" name="confirm_password" required />
+                </label>
+
+                <button type="submit" class="save-btn auth-submit">Create account</button>
+              </form>
+            </section>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <script src="scripts.js" type="module"></script>
+    <script src="apiCalls.js" type="module"></script>
+  </body>
+</html>
